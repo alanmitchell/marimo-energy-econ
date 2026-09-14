@@ -1,34 +1,30 @@
-
-
 import marimo
 
-__generated_with = "0.13.0"
-app = marimo.App(width="medium", app_title="Economics Calculator")
+__generated_with = "0.24.2"
+app = marimo.App(width="full", app_title="Economics Calculator")
 
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
-        # Energy Project Economics Calculator
+    mo.md(r"""
+    # Energy Project Economics Calculator
 
-        ### This calculator determines various measures of cost-effectiveness for an energy project.
+    ### This calculator determines various measures of cost-effectiveness for an energy project.
 
-        ---
-        """
-    )
+    ---
+    """)
     return
 
 
 @app.cell
 def _():
     import marimo as mo
-    app = mo.App(width="full")
     import pandas as pd
     import numpy_financial as nf
     import numpy as np
     from matplotlib import pyplot as plt
     import matplotlib.ticker as mtick
+
     return mo, mtick, nf, np, plt
 
 
@@ -40,6 +36,7 @@ def _(mo):
         """
         tool_tip = info.replace("\n", " ")
         return f'<span data-tooltip="{tool_tip}">{mo.icon("octicon:question-16")}</span> {label}'
+
     return (make_label,)
 
 
@@ -240,15 +237,13 @@ def _(ax, inputs_1, inputs_2, mo, res_text):
 
 @app.cell
 def _(mo):
-    mo.md(
-        r"""
-        ---
-        If you have questions or comments, please send mail to alan@analysisnorth.com.
+    mo.md(r"""
+    ---
+    If you have questions or comments, please send mail to alan@analysisnorth.com.
 
-        This app was developed using the amazing [Marimo](https://marimo.io/) Python notebook tool. The notebook
-        source code is [available here](https://github.com/alanmitchell/apps/blob/main/notebooks/econ.py).
-        """
-    )
+    This app was developed using the amazing [Marimo](https://marimo.io/) Python notebook tool. The notebook
+    source code is [available here](https://github.com/alanmitchell/apps/blob/main/notebooks/econ.py).
+    """)
     return
 
 
