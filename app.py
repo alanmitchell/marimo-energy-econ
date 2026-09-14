@@ -23,6 +23,7 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
+    app = mo.App(width="full")
     import pandas as pd
     import numpy_financial as nf
     import numpy as np
