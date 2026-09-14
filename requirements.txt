@@ -1,0 +1,4 @@
+marimo
+pandas
+matplotlib
+numpy_financial
